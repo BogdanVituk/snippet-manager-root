@@ -44,7 +44,26 @@ PORT=4000
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:4000
 
-![alt text](image.png)
+API Endpoints
+
+| Метод | Ендпоінт | Опис |
+| :--- | :--- | :--- |
+| **`GET`** | `/snippets` | Отримати всі сніпети (з підтримкою пагінації) |
+| **`GET`** | `/snippets/:id` | Отримати детальну інформацію про сніпет за його ID |
+| **`POST`** | `/snippets` | Створити новий сніпет |
+| **`PATCH`** | `/snippets/:id` | Оновити існуючий сніпет за його ID |
+| **`DELETE`** | `/snippets/:id` | Видалити сніпет з бази даних |
+| **`GET`** | `/snippets/tags` | Отримати список усіх унікальних тегів |
+
+Приклад POST запиту (/snippets):
+
+JSON
+    {
+    "title": "React Hook",
+    "content": "const [state, setState] = useState()",
+    "type": "note",
+    "tags": ["react", "hooks"]
+    }
 
 Білд та Production режим
     Для фронтенду (Next.js):
